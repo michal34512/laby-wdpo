@@ -18,7 +18,6 @@ def main():
     img = cv2.imread('lenna_noise.bmp')
     #img = cv2.imread('lenna_salt_and_pepper.bmp')
 
-    gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     cv2.imshow('image', img)
     img_blur = cv2.blur(img,(10, 10))
     img_gauss = cv2.GaussianBlur(img, (5,5), 0,) # sigma = 0 -> calculated from kernel size
