@@ -5,9 +5,8 @@ def empty_callback(value):
     pass
 
 def main():
-    img = cv2.imread('obraz.jpeg')
+    gray_img = cv2.imread('obraz.jpeg', cv2.IMREAD_GRAYSCALE)
     cv2.namedWindow('image')
-    gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     cv2.createTrackbar('Thresholding', 'image', 127, 255, empty_callback)
     cv2.createTrackbar('0 : Simple \n1 : Adaptive : 2\n Adaptive + gauss', 'image', 0, 2, empty_callback)
