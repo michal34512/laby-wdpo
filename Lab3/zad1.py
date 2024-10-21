@@ -15,8 +15,8 @@ def trackbar_value_changed(value, winName, img):
             cv2.imshow(winName, img_blur)
 
 def main():
-    img = cv2.imread('lenna_noise.bmp')
-    #img = cv2.imread('lenna_salt_and_pepper.bmp')
+    #img = cv2.imread('lenna_noise.bmp')
+    img = cv2.imread('lenna_salt_and_pepper.bmp')
 
     cv2.imshow('image', img)
     img_blur = cv2.blur(img,(10, 10))
