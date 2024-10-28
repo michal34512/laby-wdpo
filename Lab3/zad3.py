@@ -43,15 +43,12 @@ def compare_durations():
     myblur = myBlur(img)
     mytime = time.perf_counter() - start_time
     print(f"Cv: {cvtime} My: {mytime}")
-def filter2D():
-    img = cv2.imread('obraz.jpeg', cv2.IMREAD_GRAYSCALE)
     start_time = time.perf_counter()
     blurred_filter2D = cv2.filter2D(img, -1, (3,3))
     cvfiltertime = time.perf_counter() - start_time
     print(f"Cvfilter: {cvfiltertime}")
-    
 def main():
-    filter2D()
+    compare_durations()
     
 if __name__ == "__main__":
     main()
